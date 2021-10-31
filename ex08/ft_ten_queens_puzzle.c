@@ -98,7 +98,7 @@ bool	recursive_find(int board[][BOARD_SIZE], int x, int *soluce)
 	return (false);
 }
 
-int		ft_ten_queens_puzzle(void)
+int	ft_ten_queens_puzzle(void)
 {
 	int	soluce;
 	int	board[BOARD_SIZE][BOARD_SIZE];

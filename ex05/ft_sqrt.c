@@ -20,8 +20,19 @@ int	ft_sqrt(int nb)
 	if (nb <= 1)
 		return (nb);
 	index = 0;
-	while ((sqrt = index * index) <= (unsigned int)nb)
+	sqrt = index * index;
+	while (sqrt <= (unsigned int)nb)
+	{
 		index++;
+		sqrt = index * index;
+	}
 	index -= 1;
-	return (index * index == (unsigned int)nb ? index : 0);
+	if (index * index == (unsigned int)nb)
+	{
+		return (index);
+	}
+	else
+	{
+		return (0);
+	}
 }
