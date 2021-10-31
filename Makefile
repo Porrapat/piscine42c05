@@ -17,7 +17,7 @@ compile: norminette
 	-gcc ./ex03/ft_recursive_power.c test_ex03_ft_recursive_power.c -Wall -Werror -Wextra -o test_ex03_ft_recursive_power
 	-gcc ./ex04/ft_fibonacci.c test_ex04_ft_fibonacci.c -Wall -Werror -Wextra -o test_ex04_ft_fibonacci
 	-gcc ./ex05/ft_sqrt.c test_ex05_ft_sqrt.c -Wall -Werror -Wextra -o test_ex05_ft_sqrt
-	-gcc ./ex06/ft_is_prime.c test_ex06_ft_is_prime.c -Wall -Werror -Wextra -o test_ex06_ft_is_prime
+	-gcc ./ex06/ft_is_prime.c test_ex06_ft_is_prime.c -Wall -Werror -Wextra -lm -o test_ex06_ft_is_prime
 	-gcc ./ex07/ft_find_next_prime.c test_ex07_ft_find_next_prime.c -Wall -Werror -Wextra -o test_ex07_ft_find_next_prime
 	-gcc ./ex08/ft_ten_queens_puzzle.c test_ex08_ft_ten_queens_puzzle.c -Wall -Werror -Wextra -o test_ex08_ft_ten_queens_puzzle
 
