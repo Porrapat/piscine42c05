@@ -87,3 +87,5 @@ clean-before-push-with-sample: clean
 	-git add .
 	-git commit -m "Build Sample Complete"
 	-git push origin master
+
+.PHONY: norminette compile build-sample  run all test clean clean-sample clean-before-push-with-sample
