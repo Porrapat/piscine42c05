@@ -31,7 +31,7 @@ bool	is_queen_at_risk(int board[][BOARD_SIZE], int at_x, int at_y)
 		{
 			if (x == at_x || y == at_y
 				|| y == x + offsets[0] || y == -x + offsets[1])
-				if (board[y][x])
+				if (board[x][y])
 					return (true);
 			y++;
 		}
@@ -85,13 +85,13 @@ bool	recursive_find(int board[][BOARD_SIZE], int x, int *soluce)
 	{
 		if (!is_queen_at_risk(board, x, y))
 		{
-			board[y][x] = true;
+			board[x][y] = true;
 			if (recursive_find(board, x + 1, soluce))
 			{
 				*soluce += 1;
 				print_queen_position(board);
 			}
-			board[y][x] = false;
+			board[x][y] = false;
 		}
 		y++;
 	}
