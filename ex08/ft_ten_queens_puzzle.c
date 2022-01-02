@@ -13,7 +13,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 
-#define BOARD_SIZE 10
+#define BOARD_SIZE 5
 
 bool	is_queen_at_risk(int board[][BOARD_SIZE], int at_x, int at_y)
 {
@@ -53,23 +53,23 @@ void	clear_column(int board[][BOARD_SIZE], int x)
 
 void	print_queen_position(int board[][BOARD_SIZE])
 {
+	int	x;
 	int	y;
-	int	column;
 
-	y = 0;
-	while (y < BOARD_SIZE)
+	x = 0;
+	while (x < BOARD_SIZE)
 	{
-		column = 0;
-		while (column < BOARD_SIZE)
+		y = 0;
+		while (y < BOARD_SIZE)
 		{
-			if (board[y][column])
+			if (board[x][y])
 			{
-				write(1, &"0123456789"[column], 1);
+				write(1, &"0123456789"[y], 1);
 				break ;
 			}
-			column++;
+			y++;
 		}
-		y++;
+		x++;
 	}
 	write(1, "\n", 1);
 }
