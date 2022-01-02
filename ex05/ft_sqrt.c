@@ -28,11 +28,7 @@ int	ft_sqrt(int nb)
 	}
 	index -= 1;
 	if (index * index == (unsigned int)nb)
-	{
 		return (index);
-	}
 	else
-	{
 		return (0);
-	}
 }
