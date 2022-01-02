@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+int	ft_sqrt_with_floor(int nb)
 {
 	unsigned int		sqrt;
 	unsigned int		index;
@@ -42,7 +42,7 @@ int	ft_is_prime(int nb)
 	if (nb % 2 == 0 || nb % 3 == 0)
 		return (0);
 	index = 2;
-	sqrt = ft_sqrt(nb);
+	sqrt = ft_sqrt_with_floor(nb);
 	while ((index <= sqrt) && (nb % index != 0))
 		index++;
 	return (index > sqrt);
