@@ -13,7 +13,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 
-#define BOARD_SIZE 5
+#define BOARD_SIZE 10
 
 bool	is_queen_at_risk(int board[][BOARD_SIZE], int at_x, int at_y)
 {
